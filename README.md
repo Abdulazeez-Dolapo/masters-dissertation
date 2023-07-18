@@ -14,7 +14,7 @@
 | player_url                  | ---                | no             |
 | short_name                  | ---                | no             |
 | long_name                   | ---                | no             |
-| player_positions            | ---                | no             |
+| player_positions            | ---                | yes            |
 | overall                     | ---                | yes            |
 | potential                   | ---                | yes            |
 | value_eur                   | ---                | yes            |
@@ -27,7 +27,7 @@
 | club_name                   | ---                | yes            |
 | league_name                 | ---                | yes            |
 | league_level                | ---                | no             |
-| club_position               | ---                | yes            |
+| club_position               | ---                | no             |
 | club_jersey_number          | ---                | no             |
 | club_loaned_from            | ---                | no             |
 | club_joined                 | ---                | no             |
@@ -123,6 +123,6 @@
 
 ## Data Cleaning and Preprocessing
 
-1. Remove rows where `club_contract_valid_until` is less than or equal to current year - 2023.
-2. Remove rows where `club_position` is _GK_ and store them in an array/list/dataframe.
-3. Create new position group called `position` and using the `club_position` column, group players as _defender_, _midfielder_, and _forward_.
+1. Remove unused columns.
+2. Rename `player_positions` column to `position` and update values to _defender_, _midfielder_, and _forward_ based on value.
+3. Remove rows with missing/null values.
