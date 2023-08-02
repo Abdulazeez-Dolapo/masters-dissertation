@@ -126,3 +126,4 @@
 1. Remove unused columns.
 2. Rename `player_positions` column to `position` and update values to _defender_, _midfielder_, and _forward_ based on value.
 3. Remove rows with missing/null values.
+4. Remove players without at least 1 year remaining on their contracts.
