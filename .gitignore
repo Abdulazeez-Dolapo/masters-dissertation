@@ -2,3 +2,4 @@
 random.py
 random.md
 .vscode/*
+__pycache__/*
